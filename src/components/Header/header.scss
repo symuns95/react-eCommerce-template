@@ -1,0 +1,41 @@
+@import "../../styles/config/mixin";
+@import "../../styles/config/var";
+// --> header section style start
+.section-header-main {
+  // --> headerTop style start
+
+  .header-top-main {
+    .header-top-brand {
+      font-weight: 700;
+      display: none;
+    }
+    .header-top-contact-no {
+      font-weight: 900;
+    }
+    @include xsScreen {
+      .header-top-brand {
+        display: block;
+      }
+      .header-top-ul {
+        display: none;
+      }
+    }
+  }
+  // --> headerTop style end
+  //
+  // --> headerMiddle style start
+  .header-middle-main {
+    .header-middel-brand {
+      display: block;
+    }
+    @include xsScreen {
+      .header-middel-brand {
+        display: none;
+      }
+    }
+  }
+
+  // --> headerMiddle style end
+}
+
+// --> header section style end
