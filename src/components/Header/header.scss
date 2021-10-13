@@ -28,9 +28,21 @@
     .header-middel-brand {
       display: block;
     }
+    .btn-menu {
+      display: none;
+    }
     @include xsScreen {
       .header-middel-brand {
         display: none;
+      }
+      .header-middle-src-box {
+        width: 80%;
+      }
+      .header-middle-icons-account {
+        display: none;
+      }
+      .btn-menu {
+        display: block;
       }
     }
   }

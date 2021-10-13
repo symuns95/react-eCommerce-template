@@ -8,8 +8,8 @@ const App = () => {
     <Router>
       <HeaderMain />
       <Switch>
-        {router.map((route) => {
-          return <Route exact={route.exact} path={route.path} component={route.component} />;
+        {router.map((route, i) => {
+          return <Route key={i} exact={route.exact} path={route.path} component={route.component} />;
         })}
       </Switch>
     </Router>

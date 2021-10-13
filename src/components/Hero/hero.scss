@@ -1,0 +1,80 @@
+@import "../../styles/config/mixin";
+@import "../../styles/config/var";
+// --> hero setion style start
+.section-hero-main {
+  height: 100vh;
+  @include xsScreen {
+    height: 600px;
+  }
+  background-position: center;
+
+  // slider default
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+    .swiper-pagination-bullets {
+      bottom: 30px;
+      .swiper-pagination-bullet {
+        background-color: #ebebeb;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: #a8a8a8;
+      }
+    }
+  }
+
+  .swiper-slide {
+    font-size: 18px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include xsScreen {
+      background-size: cover;
+    }
+  }
+
+  // slider default  end
+
+  .section-hero-container {
+    position: relative;
+    height: 100%;
+
+    .row-section-hero {
+      position: absolute;
+      left: 0;
+      @include xsScreen {
+        top: 40%;
+        transform: translateY(-50%);
+      }
+      top: 30%;
+      width: 100%;
+      flex-direction: column;
+      .section-hero-info {
+        .section-hero-sub-heading {
+          text-transform: capitalize;
+        }
+        @include xsScreen {
+          .section-hero-sub-heading {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+          }
+          .section-hero-heading {
+            font-size: 2.8rem;
+          }
+        }
+
+        .section-hero-btn {
+          background-color: $colorPrimary;
+          display: inline-block;
+          cursor: pointer;
+        }
+      }
+    }
+    @include xsScreen {
+      .row-section-hero {
+        // padding: 10% 1rem;
+      }
+    }
+  }
+}
+// --> hero setion style end

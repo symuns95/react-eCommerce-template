@@ -1,0 +1,32 @@
+@import "../../styles/config/mixin";
+.categories-main {
+  .categories-container {
+    @include xsScreen {
+      padding: 0 1rem;
+    }
+    .categories {
+      display: grid;
+      grid-gap: 1rem;
+    }
+    @include xsScreen {
+      .categories {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+      }
+    }
+    @include lgToUp {
+      .categories {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        .mobile {
+          grid-row-start: 1;
+          grid-row-end: 3;
+        }
+      }
+    }
+    .category {
+      // border-radius: 5px;
+      padding: 1rem;
+    }
+  }
+}

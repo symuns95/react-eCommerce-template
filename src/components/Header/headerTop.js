@@ -6,29 +6,38 @@ const HeaderTop = () => {
     {
       name: "About",
       path: "/about",
+      style: ""
     },
     {
       name: "Contact",
       path: "/contact",
+      style: "px-3 lg:px-4"
     },
     {
       name: "Delivery",
       path: "/delivery",
+      style: "px-3 lg:px-4"
     },
     {
       name: "Payment",
       path: "/payment",
-    },
+      style: "px-3 lg:px-4"
+    }
   ];
   return (
     <>
       <div className=" flex flex-wrap justify-between header-top-main">
         <ul className="header-top-ul flex items-center">
           {navTopItems.map((item, i) => {
-            const { name, path } = item;
+            const { name, path, style } = item;
             return (
               <li className=" text-center 2xl:text-xl" key={i}>
-                <NavLink exact activeClassName="text-gray-400 " className="px-3 lg:px-4" to={path}>
+                <NavLink
+                  exact
+                  activeClassName="text-gray-400 "
+                  className={style}
+                  to={path}
+                >
                   {name}
                 </NavLink>
               </li>
